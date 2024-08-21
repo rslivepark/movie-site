@@ -1,10 +1,12 @@
 import React from 'react';
 import Banner from './components/banner/Banner';
+import PopularMovieSlide from './components/popularMovieSlide/PopularMovieSlide';
 
 export default function Homepage() {
   return (
     <div>
       <Banner />
+      <PopularMovieSlide />
     </div>
   );
 }
