@@ -1,19 +1,20 @@
 import React from 'react';
-import './Banner.style.css';
+import './HomeBanner.style.css';
 import { usePopularMoviesQuery } from '../../../../hooks/usePopularMovies';
-import { Alert } from 'react-bootstrap';
+import LoadingSpinner from '../../../../common/LoadingSpinner';
+import ErrorMessage from '../../../../common/ErrorMessage';
 
-export default function Banner() {
+export default function HomeBanner() {
   const { data, isLoading, isError, error } = usePopularMoviesQuery();
-  console.log(data);
+  // console.log(data);
 
   if (isLoading) {
-    return <h1>Loading...</h1>;
+    return <LoadingSpinner />;
+  }
+  if (isError) {
+    return <ErrorMessage error={error} />;
   }
 
-  if (isError) {
-    return <Alert variant='danger'>{error.message}</Alert>;
-  }
   return (
     <div
       style={{

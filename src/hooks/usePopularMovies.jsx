@@ -2,16 +2,12 @@ import { useQuery } from '@tanstack/react-query';
 import api from '../utils/api';
 
 const fetchPopularMovies = () => {
-  return api.get(`/movie/popular`);
+  return api.get(`/movie/popular?page=1`);
 };
 
-const fetchTopRated = () => {
-  return api.get(`/movie/top_rated`);
-};
 
-const fetchUpcoming = () => {
-  return api.get(`/movie/upcoming`);
-};
+
+
 
 export const usePopularMoviesQuery = () => {
   return useQuery({
@@ -21,18 +17,6 @@ export const usePopularMoviesQuery = () => {
   });
 };
 
-export const useTopRatedQuery = () => {
-  return useQuery({
-    queryKey: ['top-rated'],
-    queryFn: fetchTopRated,
-    select: (result) => result.data,
-  });
-};
 
-export const useUpcomingQuery = () => {
-  return useQuery({
-    queryKey: ['upcoming'],
-    queryFn: fetchUpcoming,
-    select: (result) => result.data,
-  });
-};
+
+

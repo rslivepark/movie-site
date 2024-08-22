@@ -7,18 +7,22 @@ import 'react-multi-carousel/lib/styles.css';
 export default function MovieSlider({ title, movies, responsive }) {
   return (
     <div>
-      <h3>{title}</h3>
-      <Carousel
-        infinite={true}
-        centerMode={true}
-        itemClass='carousel-item-padding-40-px'
-        containerClass='carousel-container'
-        responsive={responsive}
-      >
-        {movies?.map((movie, index) => (
-          <MovieCard key={index} movie={movie} responsive={responsive} />
-        ))}
-      </Carousel>{' '}
+      <h3 className='fw-bold pt-5'>{title}</h3>
+      {movies.length > 0 ? (
+        <Carousel
+          responsive={responsive}
+          itemClass='movie-slider p-1'
+          infinite={true}
+          containerClass='carousel-container'
+          sliderClass='sliderClass'
+        >
+          {movies.map((movie, index) => (
+            <MovieCard key={index} movie={movie} />
+          ))}
+        </Carousel>
+      ) : (
+        <div>0 results</div>
+      )}
     </div>
   );
 }

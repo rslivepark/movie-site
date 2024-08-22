@@ -1,8 +1,68 @@
 :root {
-  --bg-color: #212529;
+  --bg-color: #000;
   --text-color: #f8f9fa;
+  --accent-color: #0dcaf0;
+  --black: #181818;
+  --white: #fafafa;
+  --green: #58dd94;
+  --black: #242424;
+  --orange: #fd7e14;
+  --pink: #d63384;
+  --blue: #0d6efd;
+  --yellow: #ffc107;
+  --light: #f8f9fa;
+  --dark: #dee2e6;
+  --teal: #20c997;
+  --cyan: #0dcaf0;
+  --indigo: #6610f2;
+  --purple: #6f42c1;
+  --red: #dc3545;
+  --lightgreen: #5cb85c;
 }
 #root {
   background-color: var(--bg-color);
   color: var(--text-color);
+}
+.more {
+  max-height: none;
+}
+.fold {
+  max-height: 100px;
+}
+.banner {
+  height: 56vh;
+  background-position: center;
+}
+.banner:before {
+  content: '';
+  background: linear-gradient(to top, black, transparent);
+  position: absolute;
+  left: 0;
+  height: 56vh;
+  width: 100%;
+}
+.banner-text-area {
+  width: 36%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  height: 100%;
+}
+.banner-text-area > * {
+  z-index: 2;
+}
+.banner-text-area button {
+  max-width: 200px;
+  width: 50%;
+}
+@media (max-width: 480px) {
+  .banner-text-area {
+    width: 100%;
+  }
+}
+.youtube-frame {
+  height: 400px;
+}
+.trailer-modal {
+  background-color: black !important;
 }
