@@ -26,6 +26,10 @@
   max-width: 200px;
   width: 50%;
 }
+.homebanner-text-area {
+  position: relative;
+  top: 8rem;
+}
 @media (max-width: 480px) {
   .banner-text-area {
     width: 100%;
