@@ -22,7 +22,7 @@ export default function HomeBanner() {
       }}
       className='banner'
     >
-      <div className='text-light banner-text-area'>
+      <div className='text-light banner-text-area px-5 '>
         <h1>{data?.results[0].title}</h1>
         <p>{data?.results[0].overview}</p>
       </div>

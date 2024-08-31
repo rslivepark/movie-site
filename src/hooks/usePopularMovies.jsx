@@ -5,10 +5,6 @@ const fetchPopularMovies = () => {
   return api.get(`/movie/popular?page=1`);
 };
 
-
-
-
-
 export const usePopularMoviesQuery = () => {
   return useQuery({
     queryKey: ['popular-movie'],
@@ -16,7 +12,3 @@ export const usePopularMoviesQuery = () => {
     select: (result) => result.data,
   });
 };
-
-
-
-
