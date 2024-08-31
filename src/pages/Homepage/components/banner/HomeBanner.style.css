@@ -31,3 +31,19 @@
     width: 100%;
   }
 }
+
+@media (max-width: 576px) {
+  .banner-text-area {
+    width: 100%;
+  }
+}
+@media (max-width: 768px) {
+  .banner-text-area {
+    width: 100%;
+  }
+}
+@media (max-width: 992px) {
+  .banner-text-area {
+    width: 80%;
+  }
+}
